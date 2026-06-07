@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id" oncontextmenu="return false;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>❤️ Happy Birthday ❤️</title>
+    <script src="./js/sweetalert.min.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./image/0fc4c46f554e2873f8f8779e5b6227cf.jpg"
+    />
+    <link rel="stylesheet" href="./css/cheeseforme.css" />
+
+    <!-- HTML Meta Tags --> 
+    <meta name="description" content="Hadiah Valentine Untuk Kamu" />
+    <meta name="language" content="id" />
+    <meta name="author" content="CLUMSY | xxza.1975 | CLUMSY" />
+    <meta name="keywords" content="valentine,love" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="CLUMSY | xxza.1975 | CLUMSY" />
+    <meta itemprop="description" content="Hadiah Valentine Untuk Kamu" />
+    <meta
+      itemprop="image"
+      content="./image/0fc4c46f554e2873f8f8779e5b6227cf.jpg"
+    />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://mykingbee.blogspot.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Selamat Hari Valentin Sayang" />
+    <meta property="og:description" content="Hadiah Valentine Untuk Kamu" />
+    <meta
+      property="og:image"
+      content="./image/0fc4c46f554e2873f8f8779e5b6227cf.jpg"
+    />
+    <meta
+      property="og:site_name"
+      content="CLUMSY | xxza.1975 | CLUMSY"
+    />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Selamat Hari Valentin Sayang" />
+    <meta name="twitter:description" content="Hadiah Valentine Untuk Kamu" />
+    <meta
+      name="twitter:image"
+      content="./image/0fc4c46f554e2873f8f8779e5b6227cf.jpg"
+    />
+
+    <!-- Meta Tags Generated via https://github.com/Xnuvers007/Meta-Generator -->
+  </head>
+  <body>
+    <div id="login-page" class="login-container">
+      <img
+        src="./image/bubu-drives-car-hello-dudu.webp"
+        alt="Bubu Drives Car"
+        class="gambarDudu"
+      />
+      <h2>Hai!! </h2>
+      <div class="login-form">
+        <input type="text" id="username" placeholder="Username" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button onclick="checkLogin()">Login</button>
+        <p id="error-message"></p>
+      </div>
+    </div>
+    <div id="content">
+      <audio class="music" id="linkmp3" autoplay loop muted>
+        <source src="./music/softlove-emptybottle.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <div class="floating-hearts"></div>
+      <div class="container">
+        <h1>
+          Happy Birthday Michele Wang! <span class="heart">❤️</span>
+        </h1>
+
+        <div class="message">
+          <p class="yangtercinta">Dear Celle!</p>
+          <p class="alasan">
+           <p> Another year added to the archives. </p>
+            <p> new chapter unfolding under your name. </p>
+           <p> I celebrate the version of you that i knew,</p>
+            <p> and the person you are becoming. </p>
+            <p></p>
+            <p> May the world treat you with the same warmth, </p>
+          <p> that you gave to the moments we once held. </p>
+          </p>
+          <p class="selamatValentine">Happy Birthday! 💝</p>
+        </div>
+
+        <div class="gif-container">
+          <img
+            class="main-gif"
+            src="./image/bear-kiss-bear-kisses.gif"
+            alt="Bear Kiss GIF"
+          />
+        </div>
+
+        <div class="counter">
+          <p>TERHITUNG SUDAH !! </p>
+          <div id="loveCounter">Loading...</div>
+        </div>
+
+        <div class="memory-box">
+          <h3>Foto orang ultah ~ </h3>
+          <div class="gallery">
+            <div class="gallery-item">
+              <!-- src diganti dengan url yang diingkan -->
+              <img src="image/foto1.png" alt="Memory 1" />
+              <div class="gallery-overlay">
+                <span class="gallery-title">
+                  Pap foto pertama :3 <br /><br />
+                   <br />
+                </span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="image/foto2.png" alt="Memory 2" />
+              <div class="gallery-overlay">
+                <span class="gallery-title"
+                  >Foto yang paling aku suka yang pernah kamu kirim <br /><br />
+                 <br />
+                  <br />
+                </span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="image/foto3.png" alt="Memory 3" />
+              <div class="gallery-overlay">
+                <span class="gallery-title"
+                  >First time mabar <br /><br />
+                   <br />
+                   <br />
+                  
+                </span>
+              </div>
+            </div>
+            <div class="gallery-item">
+              <img src="image/foto4.png" alt="Memory 4" />
+              <div class="gallery-overlay">
+                <span class="gallery-title"
+                  >Ini boleh juga <br /><br />
+                  <br />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal" id="imageModal">
+          <span class="modal-close">&times;</span>
+          <img class="modal-content" id="modalImage" alt="Gallery Image" />
+          <div class="modal-caption"></div>
+        </div>
+
+        
+
+        </div>
+      </div>
+
+      <div class="love-message" id="loveMessage">
+        <span class="close-btn" onclick="closeLoveMessage()">×</span>
+        <div id="loveMessageContent"></div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <script src="./js/ingredients.js"></script>
+    <script src="./js/secrets.js"></script>
+  </body>
+</html>
