@@ -130,16 +130,27 @@ function playPopSound() {
 }
 
 function updateLoveCounter() {
-  const startDate = new Date("2000-06-30"); // Ganti dengan tanggal anniversary Anda YYYY-MM-DD
-  const today = new Date();
-  const diffTime = Math.abs(today - startDate);
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  // Date.UTC menggunakan format: (Tahun, Bulan, Tanggal)
+  // PENTING: Bulan di JavaScript dimulai dari 0. Jadi Juni = 5.
+  const startDate = Date.UTC(2000, 5, 30); 
+  
+  const now = new Date();
+  // Mengambil tanggal hari ini secara murni juga dalam format UTC
+  const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  
+  // Perhitungan pasti tanpa terpengaruh jam (selalu bulat)
+  const diffTime = today - startDate;
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
   document.getElementById("loveCounter").innerHTML = `
         <p style="font-size: 1.5em; margin: 10px 0;">
             ${diffDays} Hari lalu Celle Kita Lahir!!! <br />
         </p>
     `;
 }
+
+// Jangan lupa jalankan fungsinya
+updateLoveCounter();
 
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImage");
