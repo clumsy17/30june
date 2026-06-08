@@ -88,11 +88,11 @@ document.addEventListener("contextmenu", function(e) {
 </script>
 <script>
 setInterval(function () {
-    // Cek apakah dibuka lewat HP/Mobile (termasuk iPhone)
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    // 1. Cek apakah perangkat mendukung layar sentuh (HP / Tablet)
+    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
-    // Proteksi hanya berjalan jika dibuka di PC/Laptop
-    if (!isMobile) {
+    // 2. Proteksi 'Akses diblokir' HANYA berjalan di perangkat non-touch (PC / Laptop)
+    if (!isTouchDevice) {
         if (window.outerWidth - window.innerWidth > 160 ||
             window.outerHeight - window.innerHeight > 160) {
             document.body.innerHTML = "<h1 style='text-align:center; margin-top:20%; font-family:sans-serif;'>Akses diblokir</h1>";
