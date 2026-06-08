@@ -88,9 +88,15 @@ document.addEventListener("contextmenu", function(e) {
 </script>
 <script>
 setInterval(function () {
-    if (window.outerWidth - window.innerWidth > 160 ||
-        window.outerHeight - window.innerHeight > 160) {
-        document.body.innerHTML = "<h1>Akses diblokir</h1>";
+    // Cek apakah dibuka lewat HP/Mobile (termasuk iPhone)
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    // Proteksi hanya berjalan jika dibuka di PC/Laptop
+    if (!isMobile) {
+        if (window.outerWidth - window.innerWidth > 160 ||
+            window.outerHeight - window.innerHeight > 160) {
+            document.body.innerHTML = "<h1 style='text-align:center; margin-top:20%; font-family:sans-serif;'>Akses diblokir</h1>";
+        }
     }
 }, 1000);
 </script>
